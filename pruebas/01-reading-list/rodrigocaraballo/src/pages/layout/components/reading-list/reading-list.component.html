@@ -1,0 +1,7 @@
+<div *ngIf="showReadingList" class="w-full bg-slate-700 rounded-lg h-4/5 grid grid-cols-2 p-10 gap-3">
+  <h2 class="col-span-2 text-center text-4xl text-white font-semibold mb-4">Lista de Lectura</h2>
+  <div *ngFor="let book of readingList" class="relative col-span-1" @fadeIn @fadeOut>
+    <button class="absolute -top-1 -right-1 px-2 text-red-600 font-semibold text-center bg-white" (click)="removeBook(book)">X</button>
+    <img [src]="book.cover" [alt]="'Image of ' + book.title" class="h-full w-full rounded-md shadow-lg shadow-slate-400">
+  </div>
+</div>

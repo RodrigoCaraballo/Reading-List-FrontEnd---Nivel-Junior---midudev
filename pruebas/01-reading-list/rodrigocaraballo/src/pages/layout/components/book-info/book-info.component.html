@@ -1,0 +1,21 @@
+<div @fadeIn @fadeOut class="w-full bg-slate-300 dark:bg-slate-700 rounded-lg h-4/5">
+  <div class="p-5 space-y-2 flex flex-col justify-center items-center">
+    <h2 class="text-center text-2xl font-bold dark:text-white">{{book?.title}}</h2>
+
+    <img src={{book?.cover}} [alt]="'Image of ' + book?.title" class="h-80 w-fit">
+
+
+    <div>
+      <p class="font-semibold dark:text-white">Paginas: <span class="font-normal">{{book?.pages}}</span></p>
+      <p class="font-semibold dark:text-white">Genero: <span class="font-normal">{{book?.genre}}</span></p>
+      <p class="font-semibold dark:text-white">Sinapsis: <span class="font-normal">{{book?.synopsis}}</span></p>
+      <p class="font-semibold dark:text-white">Año: <span class="font-normal">{{book?.year}}</span></p>
+      <p class="font-semibold dark:text-white">Autor: <span class="font-normal">{{book?.author?.name}}</span></p>
+    </div>
+
+    <div class="flex gap-4">
+      <button class="px-4 py-2 font-bold uppercase text-lg rounded-lg bg-indigo-600" (click)="addBook()">Agregar</button>
+      <button class="px-4 py-2 font-bold uppercase text-lg rounded-lg bg-red-600" (click)="closeWindow()">Cerrar</button>
+    </div>
+  </div>
+</div>
